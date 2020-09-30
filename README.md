@@ -1,3 +1,3 @@
 # Raspberry-Pi-Note
 ### Raspberry Pi 3 GPIO：
-![](https://i.pinimg.com/originals/ce/bb/85/cebb8528eb3b8d9b277ee0836eef6134.png)
+![Raspberry Pi 3 GPIO](https://github.com/kkldream/kk-repository/blob/master/Markdown_images/Raspberry%20Pi%203%20GPIO.png?raw=true)
