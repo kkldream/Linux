@@ -1,9 +1,8 @@
-
-### Raspberry Pi 3 GPIO：
+## Raspberry Pi
+### Raspberry Pi 2 & 3 GPIO：
 ![Raspberry Pi 3 GPIO](https://github.com/kkldream/kk-repository/blob/master/Markdown_images/Raspberry%20Pi%203%20GPIO.png?raw=true)
 
-GPIO：
-
+### Python：
 ```python
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)

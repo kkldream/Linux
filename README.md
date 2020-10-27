@@ -2,11 +2,56 @@
 * [根目錄](https://github.com/kkldream/Linux-Note)
     * [GPIO](GPIO)
     * [OpenCV](OpenCV)
-    * [UART (Serial)](UART-(Serial))
+    * [Uart-Serial](Uart-Serial)
+* [環境](#環境)
+    * [SSH](#SSH)
+    * [VNC](#VNC)
 * [其他](#其他)
     * [開機自動啟動](#開機自動啟動)
     * [改變 Swap (交換空間)](#改變-Swap-(交換空間))
     * [將 Ubuntu 家目錄資料夾的語言改為英文](#將-Ubuntu-家目錄資料夾的語言改為英文)
+# 環境
+## SSH
+Install SSH：
+```sh
+sudo apt install ssh
+```
+### 修復 "sshd error: could not load host key"：
+```sh
+service ssh status                      # 查看 SSH 狀態
+ls -al /etc/ssh/ssh*key                 # 查看密鑰
+sudo rm -r /etc/ssh/ssh*key             # 移除舊密鑰
+sudo dpkg-reconfigure openssh-server    # 生成新密鑰
+```
+原文網址：https://kknews.cc/code/lpy6jp9.html
+
+## VNC
+### Install VNC Server (遠端桌面環境將採用xfce)：
+```sh
+sudo apt install vnc4server xfce4 xfce4-goodies
+```
+in `~/.vnc/xstartup`：
+```sh
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+exec startxfce4 
+```
+```sh
+chmod 755 ~/.vnc/xstartup   # 修改權限
+vncpasswd                   # 修改密碼
+```
+原文網址：https://go-linux.blogspot.com/2019/01/ubuntu-1804-vnc-server.html
+### Ubuntu 配置自带桌面共享：
+1. 安装dconf-editor
+
+    sudo apt install dconf-editor
+2. 打开dconf-editor，依次展开org->gnome->desktop->remote-access
+
+3. 将 requre-encryption 设为 False
+4. 使用vnc远程连接
+
+原文網址：https://blog.csdn.net/jiaqi0109/article/details/78594568
 
 # 其他
 ## 將 Ubuntu 家目錄資料夾的語言改為英文
@@ -14,7 +59,7 @@
 export LANG=en_US
 xdg-user-dirs-gtk-update
 ```
-參考網址：https://blog.jaycetyle.com/2018/06/ubuntu-home-folder-lang/
+原文網址：https://blog.jaycetyle.com/2018/06/ubuntu-home-folder-lang/
 
 ## 開機自動啟動
 ### Raspberry Pi OS：
@@ -59,4 +104,4 @@ sudo swapon /swapfile
 sudo cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
-參考連結：https://blog.csdn.net/AlexWang30/article/details/90341172
+原文連結：https://blog.csdn.net/AlexWang30/article/details/90341172
