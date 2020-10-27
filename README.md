@@ -10,6 +10,21 @@
     * [開機自動啟動](#開機自動啟動)
     * [改變 Swap (交換空間)](#改變-Swap-(交換空間))
     * [將 Ubuntu 家目錄資料夾的語言改為英文](#將-Ubuntu-家目錄資料夾的語言改為英文)
+
+# 常用
+## 壓縮與解壓縮
+|格式(套件名)|壓縮|解壓縮|
+|:---:|---|---|
+|.zip (zip)|zip -r FileName.zip DirName|unzip FileName.zip|
+|.rar (rar)|rar a FileName.rar DirName|rar e FileName.rar|
+|"||unrar e FileName.rar|
+|"||rar x FileName.rar DirName|
+|.tar (tar)|tar cvf FileName.tar DirName|tar xvf FileName.tar|
+|.gz (gzip)|gzip FileName|gunzip FileName.gz|
+|"||gzip -d FileName.gz|
+|.tar.gz (gzip)|tar zcvf FileName.tar.gz DirName|tar zxvf FileName.tar.gz|
+原文網址：http://note.drx.tw/2008/04/command.html#zip
+
 # 環境
 ## SSH
 Install SSH：
