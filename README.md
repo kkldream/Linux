@@ -3,6 +3,9 @@
     * [GPIO](GPIO)
     * [OpenCV](OpenCV)
     * [Uart-Serial](Uart-Serial)
+* [常用](#常用)
+    * [壓縮與解壓縮](#壓縮與解壓縮)
+    * [使用者/群組](#使用者/群組)
 * [環境](#環境)
     * [SSH](#SSH)
     * [VNC](#VNC)
@@ -23,7 +26,33 @@
 |.gz (gzip)|gzip FileName|gunzip FileName.gz|
 |"||gzip -d FileName.gz|
 |.tar.gz (gzip)|tar zcvf FileName.tar.gz DirName|tar zxvf FileName.tar.gz|
+
 原文網址：http://note.drx.tw/2008/04/command.html#zip
+
+## 使用者/群組
+### 新增使用者：
+```sh
+adduser username
+```
+### 刪除使用者：
+```sh
+userdel username
+```
+### 既有使用者加入群組：
+```sh
+usermod --gid YOUR_GROUP YOUR_ACCOUNT                           # 設定既有帳號的主要群組
+usermod --append --groups YOUR_GROUP1,YOUR_GROUP2 YOUR_ACCOUNT  # 將既有帳號加入指定群組
+```
+### 其他指令：
+```sh
+id                  # 查詢自己所隸屬的所有群組與 ID
+id YOUR_ACCOUNT     # 查詢指定帳號所隸屬的所有群組與 ID
+groups              # 查詢自己所隸屬的所有群組
+groups YOUR_ACCOUNT # 查詢指定帳號所隸屬的所有群組
+```
+使用者檔案存放在`/etc/passwd`
+
+原文連結：https://officeguide.cc/linux-add-user-to-group-tutorial/
 
 # 環境
 ## SSH
