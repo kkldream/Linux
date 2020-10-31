@@ -1,6 +1,6 @@
 ## Raspberry Pi
 ### Raspberry Pi 2 & 3 GPIO：
-![Raspberry Pi 3 GPIO](https://github.com/kkldream/kk-repository/blob/master/Markdown_images/Raspberry%20Pi%203%20GPIO.png?raw=true)
+![Raspberry Pi 3 GPIO](https://github.com/kkldream/Markdown/blob/main/image/Raspberry%20Pi%203%20GPIO.png)
 
 ### Python：
 ```python
