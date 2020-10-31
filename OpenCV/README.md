@@ -5,9 +5,17 @@
     * [視窗：`cv2.namedWindow(window_name, flag)` ](#視窗：cv2.namedWindow(window_name,-flag))
 
 ## 安裝測試
+Raspberry Pi 安裝：`armv7l`
+```sh
+sudo apt install python-opencv
+sudo apt install python3-opencv
 ```
-import cv2
+Ubuntu MATE 安裝：`aarch64`  
+原文連結：https://github.com/huzz/OpenCV-aarch64
 
+```python
+import cv2
+```
 
 ## 常用指令：
 ### 讀取圖片：`cv2.imread(path, flag)`

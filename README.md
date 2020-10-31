@@ -72,7 +72,7 @@ sudo dpkg-reconfigure openssh-server    # 生成新密鑰
 ## VNC
 ### Install VNC Server (遠端桌面環境將採用xfce)：
 ```sh
-sudo apt install vnc4server xfce4 xfce4-goodies
+sudo apt install vnc4server xfce4 xfce4-goodies -y
 ```
 in `~/.vnc/xstartup`：
 ```sh
